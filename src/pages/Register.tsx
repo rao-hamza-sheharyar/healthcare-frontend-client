@@ -61,7 +61,7 @@ export default function Register() {
         localStorage.setItem('token', token);
 
         // Then create doctor profile
-        const doctorResponse = await api.post(
+        await api.post(
           '/doctors/register',
           {
             doctor: {
