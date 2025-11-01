@@ -87,8 +87,8 @@ export default function Register() {
         if (updatedUser.role === 'doctor' || updatedUser.doctor) {
           // Auto login - redirect to doctor dashboard
           toast.success('Registration successful! Redirecting to Doctor Dashboard...');
-          // Use explicit port 5174 for doctor frontend
-          const doctorUrl = 'http://localhost:5174';
+          // Use environment variable for doctor frontend URL, fallback to localhost for development
+          const doctorUrl = import.meta.env.VITE_DOCTOR_URL || 'http://localhost:5174';
           console.log('✅ Doctor registration successful!');
           console.log('✅ Redirecting to doctor dashboard:', doctorUrl);
           console.log('✅ User role:', updatedUser.role);
