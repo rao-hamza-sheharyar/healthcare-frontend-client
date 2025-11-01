@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
 import DoctorCard from '../components/DoctorCard';
 
@@ -15,8 +13,6 @@ interface Doctor {
 }
 
 export default function SearchDoctors() {
-  const { user } = useAuth();
-  const navigate = useNavigate();
   const [doctors, setDoctors] = useState<Doctor[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [specialization, setSpecialization] = useState('');
