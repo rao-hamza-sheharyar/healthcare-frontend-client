@@ -4,7 +4,7 @@ import { useAuth } from '../context/AuthContext';
 import api from '../services/api';
 
 export default function Profile() {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const [formData, setFormData] = useState({
     first_name: '',
     last_name: '',

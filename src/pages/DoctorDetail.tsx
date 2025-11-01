@@ -330,13 +330,7 @@ export default function DoctorDetail() {
                 dateFormat="MMMM d, yyyy"
                 required
                 wrapperClassName="date-picker-wrapper"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem',
-                  border: '1px solid #ddd',
-                  borderRadius: '4px',
-                  fontSize: '1rem'
-                }}
+                className="date-picker-input"
               />
             </div>
             <div style={{ marginBottom: '1rem' }}>

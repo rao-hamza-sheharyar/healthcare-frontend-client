@@ -55,7 +55,7 @@ export default function Register() {
           },
         });
 
-        const { token, user } = userResponse.data;
+        const { token } = userResponse.data;
 
         // Set token for subsequent requests
         localStorage.setItem('token', token);
